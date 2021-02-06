@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/expense_add_shape"
+        tools:context=".AddExpenseActivity">
+
+
+        <Spinner
+            android:id="@+id/expense_spinner"
+            android:layout_width="283dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:layoutDirection="rtl"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toTopOf="@+id/expense_cost"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expense_title" />
+
+        <TextView
+            android:id="@+id/expense_title"
+            android:layout_width="211dp"
+            android:layout_height="75dp"
+            android:gravity="center"
+            android:text="ثبت هزینه"
+            android:textColor="@color/title_color"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/expense_spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <EditText
+            android:id="@+id/expense_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_shape"
+            android:ems="10"
+            android:hint="مبلغ هزینه"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/title_color"
+            app:layout_constraintBottom_toTopOf="@+id/expense_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expense_spinner" />
+
+        <EditText
+            android:id="@+id/expense_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_shape"
+            android:ems="10"
+            android:hint="تاریخ هزینه"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/title_color"
+            app:layout_constraintBottom_toTopOf="@+id/expense_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expense_cost" />
+
+        <EditText
+            android:id="@+id/expense_description"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:background="@drawable/edit_text_shape"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="توضیحات"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/title_color"
+            app:layout_constraintBottom_toTopOf="@+id/expense_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expense_date" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/expense_save"
+            android:layout_width="195dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/button_shape"
+            android:text="ذخیره"
+            android:textColor="@color/title_color"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expense_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
